@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Software Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-950">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-gray-950 bg-opacity-90 backdrop-blur-sm shadow-lg py-4 px-8 md:px-16 flex justify-between items-center">
+        <a href="#hero" class="text-3xl font-bold text-white transition-colors duration-300 hover:text-blue-400">YourName</a>
+        <ul class="hidden md:flex space-x-8 text-lg font-semibold">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+            <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors duration-300">Skills</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">Projects</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-950 z-40 flex flex-col items-center justify-center space-y-8 text-xl transition-transform duration-300 transform translate-x-full">
+        <a href="#about" class="text-gray-300 hover:text-white" onclick="toggleMobileMenu()">About</a>
+        <a href="#skills" class="text-gray-300 hover:text-white" onclick="toggleMobileMenu()">Skills</a>
+        <a href="#projects" class="text-gray-300 hover:text-white" onclick="toggleMobileMenu()">Projects</a>
+        <a href="#contact" class="text-gray-300 hover:text-white" onclick="toggleMobileMenu()">Contact</a>
+        <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section-padding flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-screen">
+        <div class="md:w-1/2 animated-section">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight">Hello, I'm <span class="text-gradient">YourName</span></h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-400">A passionate Software Developer specializing in building modern web applications.</p>
+            <div class="mt-12 flex justify-center md:justify-start space-x-6">
+                <a href="#projects" class="py-4 px-8 rounded-full text-lg font-bold text-white btn-gradient shadow-lg">View Projects</a>
+                <a href="#contact" class="py-4 px-8 rounded-full text-lg font-bold text-blue-400 border-2 border-blue-400 transition-colors duration-300 hover:bg-blue-600 hover:text-white">Get in Touch</a>
+            </div>
+        </div>
+        <div class="mt-12 md:mt-0 md:w-1/2 flex justify-center md:justify-end animated-section">
+            <div class="w-72 h-72 md:w-96 md:h-96 rounded-full flex items-center justify-center overflow-hidden border-4 border-blue-400 shadow-2xl">
+                <p class="text-gray-600 text-sm">Your Professional Photo Here</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding animated-section">
+        <h2 class="text-4xl font-bold text-center text-white mb-12">About Me</h2>
+        <div class="max-w-4xl mx-auto text-lg text-gray-400 text-center bg-gray-800 rounded-2xl p-8 shadow-inner">
+            <p>I am a highly motivated and results-driven software developer with a solid foundation in full-stack development. My expertise lies in creating dynamic and responsive web applications using modern technologies. With a strong passion for clean code and a knack for problem-solving, I thrive in collaborative environments and am committed to continuous learning and improvement.</p>
+            <p class="mt-4">My journey in software development began with a curiosity for how things work, and it has evolved into a career where I am constantly building and innovating. I am always excited to take on new challenges and contribute to projects that make a real-world impact.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding animated-section">
+        <h2 class="text-4xl font-bold text-center text-white mb-12">My Skills</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+            <!-- Skill 1: JavaScript -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-transform duration-300 transform hover:translate-y-[-10px]">
+                <svg class="w-16 h-16 md:w-20 md:h-20 text-yellow-400 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14h3V14h-3v2zm0-4h3V8h-3v4z"/>
+                </svg>
+                <p class="mt-4 font-semibold text-white">JavaScript</p>
+            </div>
+            <!-- Skill 2: HTML5 -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-transform duration-300 transform hover:translate-y-[-10px]">
+                <svg class="w-16 h-16 md:w-20 md:h-20 text-orange-500 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14h3V14h-3v2zm0-4h3V8h-3v4z"/>
+                </svg>
+                <p class="mt-4 font-semibold text-white">HTML5</p>
+            </div>
+            <!-- Skill 3: CSS3 -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-transform duration-300 transform hover:translate-y-[-10px]">
+                <svg class="w-16 h-16 md:w-20 md:h-20 text-blue-500 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14h3V14h-3v2zm0-4h3V8h-3v4z"/>
+                </svg>
+                <p class="mt-4 font-semibold text-white">CSS3</p>
+            </div>
+            <!-- Skill 4: React -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-transform duration-300 transform hover:translate-y-[-10px]">
+                <svg class="w-16 h-16 md:w-20 md:h-20 text-cyan-400 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14h3V14h-3v2zm0-4h3V8h-3v4z"/>
+                </svg>
+                <p class="mt-4 font-semibold text-white">React</p>
+            </div>
+            <!-- Skill 5: Node.js -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-transform duration-300 transform hover:translate-y-[-10px]">
+                <svg class="w-16 h-16 md:w-20 md:h-h-20 text-green-500 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14h3V14h-3v2zm0-4h3V8h-3v4z"/>
+                </svg>
+                <p class="mt-4 font-semibold text-white">Node.js</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding animated-section">
+        <h2 class="text-4xl font-bold text-center text-white mb-12">My Projects</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-gray-800 rounded-xl shadow-xl">
+                <img src="https://placehold.co/600x400/1F2937/F9FAFB?text=Project+1+Preview" alt="Project 1 Preview" class="w-full rounded-t-xl opacity-80 transition-opacity duration-300 hover:opacity-100" />
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-white">Project Title 1</h3>
+                    <p class="text-gray-400 mt-2">A brief description of your project and the technologies used (e.g., React, Tailwind CSS, Firebase).</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">Live Demo</a>
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card bg-gray-800 rounded-xl shadow-xl">
+                <img src="https://placehold.co/600x400/1F2937/F9FAFB?text=Project+2+Preview" alt="Project 2 Preview" class="w-full rounded-t-xl opacity-80 transition-opacity duration-300 hover:opacity-100" />
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-white">Project Title 2</h3>
+                    <p class="text-gray-400 mt-2">A brief description of your project and the technologies used (e.g., Node.js, Express, MongoDB).</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">Live Demo</a>
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card bg-gray-800 rounded-xl shadow-xl">
+                <img src="https://placehold.co/600x400/1F2937/F9FAFB?text=Project+3+Preview" alt="Project 3 Preview" class="w-full rounded-t-xl opacity-80 transition-opacity duration-300 hover:opacity-100" />
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-white">Project Title 3</h3>
+                    <p class="text-gray-400 mt-2">A brief description of your project and the technologies used (e.g., Python, Django, PostgreSQL).</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">Live Demo</a>
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding animated-section">
+        <h2 class="text-4xl font-bold text-center text-white mb-12">Testimonials</h2>
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border-2 border-gray-700">
+                <p class="italic text-gray-400 text-lg leading-relaxed">"YourName is an exceptional developer who consistently delivers high-quality work. Their attention to detail and ability to solve complex problems is truly impressive."</p>
+                <p class="mt-6 font-semibold text-white text-right">- Client Name, Company</p>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border-2 border-gray-700">
+                <p class="italic text-gray-400 text-lg leading-relaxed">"Working with YourName was a pleasure. Their code is clean, well-documented, and they are a fantastic team player. Highly recommended!"</p>
+                <p class="mt-6 font-semibold text-white text-right">- Colleague Name, Company</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding animated-section">
+        <h2 class="text-4xl font-bold text-center text-white mb-8">Get in Touch</h2>
+        <div class="max-w-2xl mx-auto text-center">
+            <p class="text-lg text-gray-400 mb-8">I'm currently open to new opportunities. Whether you have a project in mind or just want to say hi, feel free to reach out!</p>
+            <div class="space-y-6">
+                <a href="mailto:your.email@example.com" class="py-4 px-8 rounded-full text-lg font-bold text-white btn-gradient shadow-lg block mx-auto w-fit transition-transform duration-300 transform hover:scale-105">
+                    Send Me an Email
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="flex items-center justify-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                    <svg class="w-7 h-7 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.565c0-1.403-.016-3.213-1.956-3.213-1.958 0-2.254 1.53-2.254 3.102v5.676h-3.552V9.227h3.418v1.579h.048c.476-.902 1.637-1.85 3.376-1.85 3.616 0 4.28 2.37 4.28 5.441v6.255zm-15.012-11.21h3.554v11.205H5.435V9.242zm-1.777-2.607c-.98 0-1.777-.796-1.777-1.777s.797-1.777 1.777-1.777c.981 0 1.777.796 1.777 1.777s-.796 1.777-1.777 1.777z"/></svg>
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-center py-8 text-gray-500 text-sm">
+        <p>&copy; 2024 YourName. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('translate-x-full');
+        }
+
+        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
+    </script>
+</body>
+</html>
